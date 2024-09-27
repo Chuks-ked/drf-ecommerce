@@ -1,4 +1,4 @@
-from store.models import Product
+from store.models import Product, Cart, CartItem
 from django.contrib import admin
 from django.contrib.contenttypes.admin import GenericTabularInline
 from store.admin import ProductAdmin
@@ -16,3 +16,6 @@ class CustomProductAdmin(ProductAdmin):
 
 admin.site.unregister(Product)
 admin.site.register(Product, CustomProductAdmin)
+
+admin.site.register(Cart)
+admin.site.register(CartItem)
